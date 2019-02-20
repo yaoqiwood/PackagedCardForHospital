@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>PackagedCardForHospital_FrontEnd</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--充值读卡操作-->
+    <servlet>
+        <servlet-name>readCardNumServlet</servlet-name>
+        <servlet-class>com.example.servlet.ReadCardNumServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>readCardNumServlet</servlet-name>
+        <url-pattern>/readCardNum</url-pattern>
+    </servlet-mapping>
+
+    <!--充值操作-->
+    <servlet>
+        <servlet-name>topUpCardServlet</servlet-name>
+        <servlet-class>com.example.servlet.TopUpCardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>topUpCardServlet</servlet-name>
+        <url-pattern>/topUpCard</url-pattern>
+    </servlet-mapping>
+
+    <!--刷新排班表-->
+    <servlet>
+        <servlet-name>refreshArrTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshArrTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshArrTableServlet</servlet-name>
+        <url-pattern>/refreshArrTable</url-pattern>
+    </servlet-mapping>
+
+
+    <!--在线预约-->
+    <servlet>
+        <servlet-name>addAppointServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddAppointServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addAppointServlet</servlet-name>
+        <url-pattern>/addAppoint</url-pattern>
+    </servlet-mapping>
+    
+    <!--查找当前时段是否有人已经预约-->
+    <servlet>
+        <servlet-name>findAppointServlet</servlet-name>
+        <servlet-class>com.example.servlet.FindAppointServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>findAppointServlet</servlet-name>
+        <url-pattern>/findAppoint</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 来寻找相应的Servlet-->
+    <servlet>
+        <servlet-name>refreshArrIDTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshArrIDTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshArrIDTableServlet</servlet-name>
+        <url-pattern>/refreshArrIDTable</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 取号页数-->
+    <servlet>
+        <servlet-name>countArrIDTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountArrIDTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countArrIDTableServlet</servlet-name>
+        <url-pattern>/countArrIDTable</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 删除预约APP信息-->
+    <servlet>
+        <servlet-name>delAppNumServlet</servlet-name>
+        <servlet-class>com.example.servlet.DelAppNumServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>delAppNumServlet</servlet-name>
+        <url-pattern>/delAppNum</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 卡对账-->
+    <servlet>
+        <servlet-name>refreshAccCheckTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshAccCheckTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshAccCheckTableServlet</servlet-name>
+        <url-pattern>/refreshAccCheckTable</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 卡对账总页数查找-->
+    <servlet>
+        <servlet-name>countAccCheckTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountAccCheckTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countAccCheckTableServlet</servlet-name>
+        <url-pattern>/countAccCheckTable</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.example.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>

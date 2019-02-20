@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>PackagedCardForHospital_BackEnd</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--后台登录-->
+    <servlet>
+        <servlet-name>loginRequestServlet</servlet-name>
+        <servlet-class>com.example.servlet.LoginRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginRequestServlet</servlet-name>
+        <url-pattern>/loginRequest</url-pattern>
+    </servlet-mapping>
+
+   <!--后台用户注销-->
+    <servlet>
+        <servlet-name>managerLogoutServlet</servlet-name>
+        <servlet-class>com.example.servlet.ManagerLogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>managerLogoutServlet</servlet-name>
+        <url-pattern>/managerLogout</url-pattern>
+    </servlet-mapping>
+
+    <!--后台人员表查询-->
+    <servlet>
+        <servlet-name>refreshPersonelTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshPersonelTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>refreshPersonelTableServlet</servlet-name>
+        <url-pattern>/refreshPersonelTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台人员数量查询-->
+    <servlet>
+        <servlet-name>countPersonelTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountPersonelTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countPersonelTableServlet</servlet-name>
+        <url-pattern>/countPersonelTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台科室表查询-->
+    <servlet>
+        <servlet-name>updateDepartmentInfServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateDepartmentInfServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateDepartmentInfServlet</servlet-name>
+        <url-pattern>/updateDepartmentInf</url-pattern>
+    </servlet-mapping>
+
+    <!--后台角色名查询-->
+    <servlet>
+        <servlet-name>updateRoleInfServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateRoleInfServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateRoleInfServlet</servlet-name>
+        <url-pattern>/updateRoleInf</url-pattern>
+    </servlet-mapping>
+
+    <!--后台更改数据-->
+    <servlet>
+        <servlet-name>updateRoleTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateRoleTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateRoleTableServlet</servlet-name>
+        <url-pattern>/updateRoleTable</url-pattern>
+    </servlet-mapping>
+
+
+    <!--后台人员增加业务-->
+    <servlet>
+        <servlet-name>addRoleTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddRoleTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addRoleTableServlet</servlet-name>
+        <url-pattern>/addRoleTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台人员禁用与解除-->
+    <servlet>
+        <servlet-name>banornotServlet</servlet-name>
+        <servlet-class>com.example.servlet.BanornotServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>banornotServlet</servlet-name>
+        <url-pattern>/banornot</url-pattern>
+    </servlet-mapping>
+
+    <!--后台人员伪删除-->
+    <servlet>
+        <servlet-name>delUserTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.DelUserTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>delUserTableServlet</servlet-name>
+        <url-pattern>/delUserTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台人员重置密码-->
+    <servlet>
+        <servlet-name>resetPWDServlet</servlet-name>
+        <servlet-class>com.example.servlet.ResetPWDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resetPWDServlet</servlet-name>
+        <url-pattern>/resetPWD</url-pattern>
+    </servlet-mapping>
+
+    <!--后台左侧面板初始化-->
+    <servlet>
+        <servlet-name>initLeftPanelServlet</servlet-name>
+        <servlet-class>com.example.servlet.InitLeftPanelServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>initLeftPanelServlet</servlet-name>
+        <url-pattern>/initLeftPanel</url-pattern>
+    </servlet-mapping>
+
+    <!--后台左侧面板初始化-->
+    <servlet>
+        <servlet-name>addCardStockingServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddCardStockingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addCardStockingServlet</servlet-name>
+        <url-pattern>/addCardStocking</url-pattern>
+    </servlet-mapping>
+
+    <!--后台卡片入库表刷新-->
+    <servlet>
+        <servlet-name>refreshCStockTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshCStockTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshCStockTableServlet</servlet-name>
+        <url-pattern>/refreshCStockTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台卡片入库表刷新-->
+    <servlet>
+        <servlet-name>countCStockTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountCStockTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countCStockTableServlet</servlet-name>
+        <url-pattern>/countCStockTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台卡片删除待领取的卡-->
+    <servlet>
+        <servlet-name>delSCardTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.DelSCardTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>delSCardTableServlet</servlet-name>
+        <url-pattern>/delSCardTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台收费端卡领取 -->
+    <servlet>
+        <servlet-name>refreshReqCardTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshReqCardTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshReqCardTableServlet</servlet-name>
+        <url-pattern>/refreshReqCardTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台申请单姓名获取 -->
+    <servlet>
+        <servlet-name>viewRequestorNameServlet</servlet-name>
+        <servlet-class>com.example.servlet.ViewRequestorNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>viewRequestorNameServlet</servlet-name>
+        <url-pattern>/viewRequestorName</url-pattern>
+    </servlet-mapping>
+
+    <!--后台增加申请单数据 -->
+    <servlet>
+        <servlet-name>addRequestDataServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddRequestDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addRequestDataServlet</servlet-name>
+        <url-pattern>/addRequestData</url-pattern>
+    </servlet-mapping>
+
+    <!--后台申请总计数据 -->
+    <servlet>
+        <servlet-name>countReqCardTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountReqCardTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countReqCardTableServlet</servlet-name>
+        <url-pattern>/countReqCardTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台修改申请 -->
+    <servlet>
+        <servlet-name>updateReqCardTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateReqCardTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateReqCardTableServlet</servlet-name>
+        <url-pattern>/updateReqCardTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台审批卡表 -->
+    <servlet>
+        <servlet-name>refreshAppCardTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshAppCardTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshAppCardTableServlet</servlet-name>
+        <url-pattern>/refreshAppCardTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台审批通过领卡 -->
+    <servlet>
+        <servlet-name>appRequestDataServlet</servlet-name>
+        <servlet-class>com.example.servlet.AppRequestDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>appRequestDataServlet</servlet-name>
+        <url-pattern>/appRequestData</url-pattern>
+    </servlet-mapping>
+
+    <!--后台查看审核过的卡号 -->
+    <servlet>
+        <servlet-name>viewCardNumGroupServlet</servlet-name>
+        <servlet-class>com.example.servlet.ViewCardNumGroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>viewCardNumGroupServlet</servlet-name>
+        <url-pattern>/viewCardNumGroup</url-pattern>
+    </servlet-mapping>
+
+    <!--后台获取籍贯 -->
+    <servlet>
+        <servlet-name>getNativeServlet</servlet-name>
+        <servlet-class>com.example.servlet.GetNativeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getNativeServlet</servlet-name>
+        <url-pattern>/getNative</url-pattern>
+    </servlet-mapping>
+
+    <!--后台新病人与卡号 (销售)-->
+    <servlet>
+        <servlet-name>newPatientServlet</servlet-name>
+        <servlet-class>com.example.servlet.NewPatientServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>newPatientServlet</servlet-name>
+        <url-pattern>/newPatient</url-pattern>
+    </servlet-mapping>
+
+    <!--后台新病人与卡号 -->
+    <servlet>
+        <servlet-name>readCardNumToCCARDServlet</servlet-name>
+        <servlet-class>com.example.servlet.ReadCardNumToCCARDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>readCardNumToCCARDServlet</servlet-name>
+        <url-pattern>/readCardNumToCCARD</url-pattern>
+    </servlet-mapping>
+
+    <!--后台新病人与卡号 -->
+    <servlet>
+        <servlet-name>changeCardServlet</servlet-name>
+        <servlet-class>com.example.servlet.ChangeCardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>changeCardServlet</servlet-name>
+        <url-pattern>/changeCard</url-pattern>
+    </servlet-mapping>
+
+    <!--后台读退卡 -->
+    <servlet>
+        <servlet-name>readCardExitCCARDServlet</servlet-name>
+        <servlet-class>com.example.servlet.ReadCardExitCCARDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>readCardExitCCARDServlet</servlet-name>
+        <url-pattern>/readCardExitCCARD</url-pattern>
+    </servlet-mapping>
+
+    <!--后台退卡 -->
+    <servlet>
+        <servlet-name>exitCardServlet</servlet-name>
+        <servlet-class>com.example.servlet.ExitCardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exitCardServlet</servlet-name>
+        <url-pattern>/exitCard</url-pattern>
+    </servlet-mapping>
+
+    <!--后台查看医生信息 -->
+    <servlet>
+        <servlet-name>getSelectDoctorsNameServlet</servlet-name>
+        <servlet-class>com.example.servlet.GetSelectDoctorsNameServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getSelectDoctorsNameServlet</servlet-name>
+        <url-pattern>/getSelectDoctorsName</url-pattern>
+    </servlet-mapping>
+
+    <!--后台增加医生排班 -->
+    <servlet>
+        <servlet-name>addArrDataServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddArrDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addArrDataServlet</servlet-name>
+        <url-pattern>/addArrData</url-pattern>
+    </servlet-mapping>
+
+    <!--后台刷新排班表 -->
+    <servlet>
+        <servlet-name>refreshArrTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshArrTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshArrTableServlet</servlet-name>
+        <url-pattern>/refreshArrTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台刷新管理员表 -->
+    <servlet>
+        <servlet-name>refreshCardInfTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefreshCardInfTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshCardInfTableServlet</servlet-name>
+        <url-pattern>/refreshCardInfTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台统计管理员数量表 -->
+    <servlet>
+        <servlet-name>countCardInfTableServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountCardInfTableServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countCardInfTableServlet</servlet-name>
+        <url-pattern>/countCardInfTable</url-pattern>
+    </servlet-mapping>
+
+    <!--后台查看卡信息面板 -->
+    <servlet>
+        <servlet-name>viewCardInfPanelServlet</servlet-name>
+        <servlet-class>com.example.servlet.ViewCardInfPanelServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>viewCardInfPanelServlet</servlet-name>
+        <url-pattern>/viewCardInfPanel</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 修改密码-->
+    <servlet>
+        <servlet-name>changePWDServlet</servlet-name>
+        <servlet-class>com.example.servlet.ChangePWDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>changePWDServlet</servlet-name>
+        <url-pattern>/changePWD</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 刷新领卡查询页面-->
+    <servlet>
+        <servlet-name>refCCensusTServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefCCensusTServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refCCensusTServlet</servlet-name>
+        <url-pattern>/refCCensusT</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 刷新领卡查询页面-->
+    <servlet>
+        <servlet-name>countCCensusTServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountCCensusTServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countCCensusTServlet</servlet-name>
+        <url-pattern>/countCCensusT</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 刷新领卡查询页面-->
+    <servlet>
+        <servlet-name>refWorkTServlet</servlet-name>
+        <servlet-class>com.example.servlet.RefWorkTServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refWorkTServlet</servlet-name>
+        <url-pattern>/refWorkT</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 统计页数-->
+    <servlet>
+        <servlet-name>countWorkTServlet</servlet-name>
+        <servlet-class>com.example.servlet.CountWorkTServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>countWorkTServlet</servlet-name>
+        <url-pattern>/countWorkT</url-pattern>
+    </servlet-mapping>
+
+    <!--查找ID 刷新注销页-->
+    <servlet>
+        <servlet-name>reflgCInfTServlet</servlet-name>
+        <servlet-class>com.example.servlet.ReflgCInfTServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>reflgCInfTServlet</servlet-name>
+        <url-pattern>/reflgCInfT</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 卡注销 -->
+    <servlet>
+        <servlet-name>logoutCardServlet</servlet-name>
+        <servlet-class>com.example.servlet.LogoutCardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logoutCardServlet</servlet-name>
+        <url-pattern>/logoutCard</url-pattern>
+    </servlet-mapping>
+
+    <!-- 权限管理初始化 -->
+    <servlet>
+        <servlet-name>initLeftMenuServlet</servlet-name>
+        <servlet-class>com.example.servlet.InitLeftMenuServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>initLeftMenuServlet</servlet-name>
+        <url-pattern>/initLeftMenu</url-pattern>
+    </servlet-mapping>
+
+    <!-- 权限管理数据 -->
+    <servlet>
+        <servlet-name>powerReaderServlet</servlet-name>
+        <servlet-class>com.example.servlet.PowerReaderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>powerReaderServlet</servlet-name>
+        <url-pattern>/powerReader</url-pattern>
+    </servlet-mapping>
+
+    <!-- 权限管理数据保存 -->
+    <servlet>
+        <servlet-name>setPWConfigServlet</servlet-name>
+        <servlet-class>com.example.servlet.SetPWConfigServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>setPWConfigServlet</servlet-name>
+        <url-pattern>/setPWConfig</url-pattern>
+    </servlet-mapping>
+
+     <!-- 获取申请人信息 -->
+    <servlet>
+        <servlet-name>getRequestorInfServlet</servlet-name>
+        <servlet-class>com.example.servlet.GetRequestorInfServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getRequestorInfServlet</servlet-name>
+        <url-pattern>/getRequestorInf</url-pattern>
+    </servlet-mapping>
+
+
+    <!--登录状态验证-->
+    <servlet>
+        <servlet-name>loginOrNotServlet</servlet-name>
+        <servlet-class>com.example.servlet.LoginOrNotServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginOrNotServlet</servlet-name>
+        <url-pattern>/loginOrNot</url-pattern>
+    </servlet-mapping>
+
+
+    <!--验证码获取-->
+    <servlet>
+        <servlet-name>codeServlet</servlet-name>
+        <servlet-class>com.example.servlet.CodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>codeServlet</servlet-name>
+        <url-pattern>/code</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.example.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
